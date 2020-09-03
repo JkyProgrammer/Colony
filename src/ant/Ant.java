@@ -7,7 +7,7 @@ public class Ant {
 	
 	ArrayList<Integer> outputIDs = new ArrayList<Integer> ();
 	
-	public Float[] update (float[] inputs) {
+	public Float[] update (Float[] inputs) {
 		ArrayList<Float> outs = new ArrayList<Float> ();
 		int i = 0;
 		for (float f : inputs) {
