@@ -2,6 +2,7 @@ package container;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map.Entry;
 import java.util.Queue;
 
 import ant.Ant;
@@ -75,17 +76,24 @@ public class Environment {
 	}
 
 	private void consumeNearby(Ant a) {
-		// TODO Auto-generated method stub
-		
+		// TODO	
+		for (Entry<Position, Object> tile : tiles.entrySet()) {
+			if ((tile.getKey().x < a.x + 3f) && (tile.getKey().x > a.x - 3f) && (tile.getKey().y < a.y + 3f) && (tile.getKey().y > a.y - 3f)) {
+				if (tile.getValue().getClass() == Food.class) {
+					//TODO HERE((Food)tile.getValue()).size;
+				}
+			}
+		}
 	}
 
-	private void moveAnt(Ant a, float f, Float float1) {
-		// TODO Auto-generated method stub
-		
+	private void moveAnt(Ant a, float rot, float dist) {
+		a.x += Math.cos(rot)*dist;
+		a.y += Math.sin(rot)*dist;
 	}
 
-	private TestResult testDistance(float x, float y, float f, float g) {
-		// TODO Auto-generated method stub
+	private TestResult testDistance(float x, float y, float r, float lim) {
+		// TODO
+		
 		return null;
 	}
 
