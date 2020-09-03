@@ -1,6 +1,7 @@
 package container;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Queue;
 
 import ant.Ant;
@@ -22,7 +23,8 @@ import ant.Ant;
 
 public class Environment {
 	public Queue<Ant> antSet;
-	
+	private ArrayList<Thread> threadPool;
+
 	public void threadLoop () {
 		Ant a;
 		synchronized (antSet) {
@@ -88,9 +90,10 @@ public class Environment {
 	}
 
 	private void antDied(Ant a) {
-		// TODO Auto-generated method stub
-		
+		tiles.put(new Position (a.x, a.y), new Food(10f));
 	}
 	
+	
+	private HashMap<Position, Object> tiles;
 	
 }
