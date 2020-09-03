@@ -2,5 +2,14 @@ package ant;
 
 public class Ant {
 	AntNet net;
-	// TODO
+	
+	public float[] update (float[] inputs) {
+		return inputs;
+		// TODO
+	}
+	
+	float energy;
+	float x;
+	float y;
+	float rot;
 }
